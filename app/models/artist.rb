@@ -7,6 +7,6 @@ class Artist
   property :url, type: String
   property :picture_url, type: String
 
-  has_many :in, :users, origin: 'listen_to'
-  has_many :in, :tags
+  has_many :in, :users, rel_class: :ListenTo
+  has_many :in, :tags, origin: :artist
 end

@@ -6,6 +6,6 @@ class Tag
   property :tag_value, type: String
   property :timestamp, type: Date
 
-  has_one :in, :user
-  has_one :out, :artist
+  has_one :in, :user, origin: :tags
+  has_one :out, :artist, type: :artist
 end
