@@ -1,6 +1,7 @@
 # User Model with Self Referencing
 class User
   include Neo4j::ActiveNode
+  self.include_root_in_json = false
 
   property :userID, type: Integer, index: :exact
 

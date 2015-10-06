@@ -1,12 +1,8 @@
-# Tag Model
-class Tag
+# All Tags model
+class AllTag
   include Neo4j::ActiveNode
   self.include_root_in_json = false
 
   property :tagID, type: Integer
   property :tag_value, type: String
-  property :timestamp, type: Date
-
-  has_one :in, :user, origin: :tags
-  has_one :out, :artist, type: :artist
 end

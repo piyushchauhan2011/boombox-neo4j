@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  get 'artists/index', to: 'artists#index', defaults: { format: :json }
+  # get 'artists/top_5_by_sum', to: 'artists#top_5_by_sum', defaults: { format: :json }
+  # get 'artists/top_5_by_number', to: 'artists#top_5_by_number', defaults: { format: :json }
+  # get 'artists/top_5_by_tags/:tag_id', to: 'artists#top_5_by_tags', defaults: { format: :json }
+  get 'artists/byID/:id', to: 'artists#show_artist_id', defaults: { format: :json }
+  get 'artists/:id', to: 'artists#show', defaults: { format: :json }
+
+  get 'users/index', to: 'users#index', defaults: { format: :json }
+  get 'users/byID/:id', to: 'users#show_user_id', defaults: { format: :json }
+  get 'users/:id', to: 'users#show', defaults: { format: :json }
+  # get 'users/:id/top_5_by_sum', to: 'users#top_5_by_sum', defaults: { format: :json }
+  # get 'users/:id/top_5_by_number', to: 'users#top_5_by_number', defaults: { format: :json }
+  # get 'users/:id/top_5_by_tags/:tag_id', to: 'users#top_5_by_tags', defaults: { format: :json }
+  get 'users/:id/artists/:artist_id', to: 'users#artist', defaults: { format: :json }
+
+  get 'tags/index', to: 'tags#index', defaults: { format: :json }
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
