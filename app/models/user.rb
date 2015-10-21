@@ -7,5 +7,5 @@ class User
 
   has_many :both, :friends, type: :friends, model_class: :User
   has_many :out, :artists, rel_class: :ListenTo
-  has_many :out, :tags, type: :tags
+  has_many :out, :tags, rel_class: :Tagged
 end

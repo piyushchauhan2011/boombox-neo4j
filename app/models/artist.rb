@@ -12,5 +12,5 @@ class Artist
   property :total_listeners_count, type: Integer, default: 0
 
   has_many :in, :users, rel_class: :ListenTo
-  has_many :in, :tags, origin: :artist
+  has_many :in, :tags, rel_class: :Tagged
 end
